@@ -1,0 +1,76 @@
+{
+  "name": "discovery-qa-ui",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": {
+    "name": "Philip Rumman",
+    "email": "philip.rumman@ibm.com"
+  },
+  "scripts": {
+    "prepare": "rm -rf .husky/ && husky install && husky add .husky/pre-commit 'npx pretty-quick --staged && npm run lint:write' && husky add .husky/pre-push 'npm run test && npm run build'",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color --debug",
+    "lint:write": "eslint --debug src/ --fix",
+    "prettier:write": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md}",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@carbon/icons-react": "^10.37.0",
+    "@carbon/type": "^10.35.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/carbon-components-react": "^7.42.0",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.9.4",
+    "@types/react": "^17.0.22",
+    "@types/react-dom": "^17.0.9",
+    "carbon-components": "^10.43.0",
+    "carbon-components-react": "^7.43.0",
+    "carbon-icons": "^7.0.7",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
+    "sass": "^1.41.1",
+    "typescript": "^4.4.3",
+    "web-vitals": "^2.1.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/carbon__icons-react": "^10.31.2",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.3",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1"
+  }
+}
