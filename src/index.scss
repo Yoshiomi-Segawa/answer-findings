@@ -1,0 +1,13 @@
+@import 'carbon-components/scss/globals/scss/styles.scss';
+@import '@carbon/type/scss/font-family';
+@import '@carbon/type/scss/styles';
+@import '@carbon/type/scss/scale';
+
+body,
+html {
+  font-family: carbon--font-family('mono');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+}
